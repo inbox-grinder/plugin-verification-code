@@ -1,0 +1,16 @@
+name: Plugin validation and release
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  plugin:
+    permissions:
+      contents: write
+    uses: inbox-grinder/plugin-sdk/.github/workflows/plugin.yml@51674b696c62ea7dd2498e0b52cb0aae4c7ffca8
+    with:
+      tooling-ref: 51674b696c62ea7dd2498e0b52cb0aae4c7ffca8

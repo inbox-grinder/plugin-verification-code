@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1",
+  "id": "com.inboxgrinder.examples.verification-code",
+  "name": "Verification Codes",
+  "description": "Finds short-lived verification codes and exposes a copy action.",
+  "version": "0.1.0",
+  "runtime": "wasm-component",
+  "entrypoint": "verification_code.wasm",
+  "publisher": {
+    "name": "Inbox Grinder",
+    "repository": "https://github.com/inbox-grinder/plugin-verification-code"
+  },
+  "compatibility": {
+    "inboxGrinderApi": "0.1"
+  },
+  "permissions": [
+    "read_metadata",
+    "read_text_body",
+    "copy_text",
+    "suggest_archive"
+  ],
+  "matches": {
+    "subjectContains": [
+      "code",
+      "verification",
+      "security code",
+      "one-time"
+    ]
+  },
+  "contentNeeds": {
+    "metadata": true,
+    "headers": [],
+    "textBody": true,
+    "htmlBody": false,
+    "links": false,
+    "attachments": "none"
+  },
+  "templates": [
+    {
+      "id": "verification-code",
+      "kind": "declarative",
+      "path": "template.json"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "autoArchiveAfterCopy": {
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "recordContract": {
+    "version": 1,
+    "identityVersion": 1,
+    "updateKeyVersion": 1,
+    "capabilities": [
+      {
+        "name": "records",
+        "version": 1,
+        "required": true
+      }
+    ],
+    "services": [],
+    "templates": [
+      {
+        "family": "verification-code",
+        "version": 1
+      }
+    ]
+  },
+  "catalogue": {
+    "categories": [
+      "security"
+    ]
+  }
+}

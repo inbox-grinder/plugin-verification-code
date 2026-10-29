@@ -1,0 +1,13 @@
+[package]
+name = "verification-code"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+plugin-sdk = { git = "https://github.com/inbox-grinder/plugin-sdk.git", rev = "51674b696c62ea7dd2498e0b52cb0aae4c7ffca8" }
+serde_json = "1.0.150"
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+sha2 = "0.10"

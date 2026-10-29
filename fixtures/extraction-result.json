@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1",
+  "sources": [
+    {
+      "id": "source-1",
+      "kind": "email"
+    }
+  ],
+  "records": [
+    {
+      "identity": {
+        "namespace": "verification-code",
+        "key": "7b547cafb497457c4fa8ed787bf996c3d6b1df2321d978aab52362f90ed70a33"
+      },
+      "type": "verification-code",
+      "fields": {
+        "code": {
+          "value": "123456",
+          "evidence": [
+            "source-1"
+          ],
+          "basis": "extracted",
+          "confidence": 1.0,
+          "observedAt": "2026-07-01T12:10:00Z"
+        },
+        "issuer": {
+          "value": "example-service.com",
+          "evidence": [
+            "source-1"
+          ],
+          "basis": "extracted",
+          "confidence": 1.0,
+          "observedAt": "2026-07-01T12:10:00Z"
+        },
+        "issuedAt": {
+          "value": "2026-07-01T12:10:00Z",
+          "evidence": [
+            "source-1"
+          ],
+          "basis": "extracted",
+          "confidence": 1.0,
+          "observedAt": "2026-07-01T12:10:00Z"
+        },
+        "expiresAt": {
+          "value": "2026-07-01T12:20:00Z",
+          "evidence": [
+            "source-1"
+          ],
+          "basis": "extracted",
+          "confidence": 1.0,
+          "observedAt": "2026-07-01T12:10:00Z"
+        }
+      },
+      "updates": [
+        {
+          "key": "issued",
+          "occurredAt": "2026-07-01T12:10:00Z",
+          "summary": "Verification code received",
+          "notify": true,
+          "evidence": [
+            "source-1"
+          ],
+          "fields": [
+            "code",
+            "expiresAt",
+            "issuedAt",
+            "issuer"
+          ]
+        }
+      ],
+      "attention": [],
+      "links": [],
+      "presentation": {
+        "family": "verification-code",
+        "version": 1,
+        "title": "example-service.com verification code"
+      },
+      "lifecycle": {
+        "state": "active"
+      }
+    }
+  ]
+}

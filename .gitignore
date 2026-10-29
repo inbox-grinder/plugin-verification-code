@@ -1,0 +1,7 @@
+/target/
+/dist/
+/.plugin-tools/
+/plugin
+/*.wasm
+__pycache__/
+.DS_Store

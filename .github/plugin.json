@@ -1,0 +1,4 @@
+{
+  "kind": "rust-wasm",
+  "crate": "verification_code"
+}
